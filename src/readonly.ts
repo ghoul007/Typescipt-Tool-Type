@@ -18,3 +18,26 @@ const user1 : Readonly<Person> = {
 }
 
 // user1.name = "ghoul" // <-- same error (because readonly)
+
+
+// =============
+interface Todo_1 {
+    title: string;
+    thing: {
+        level: number;
+        type: string;
+    }
+}
+
+const todo_1: Readonly<Todo_1> = {
+    title: 'Delete inactive users',
+    thing: {
+        level: 3,
+        type: 'eat'
+    }
+};
+
+todo_1.thing.type =  "apple"  // 😕  works
+
+
+

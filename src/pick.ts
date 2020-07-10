@@ -1,4 +1,4 @@
-interface Task{
+interface Task {
     name: string,
     description: string,
     date: Date,
@@ -6,7 +6,7 @@ interface Task{
 }
 
 
-type SubTask  = Pick<Task,"name" | "description">;
+type SubTask = Pick<Task, "name" | "description">;
 
 const sub1: SubTask = {
     name: "test",
